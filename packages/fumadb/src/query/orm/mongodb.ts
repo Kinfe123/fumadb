@@ -134,7 +134,7 @@ function buildWhere(condition: Condition): Filter<Document> {
 
   if (condition.type === ConditionType.Not) {
     return {
-      $not: buildWhere(condition),
+      $not: buildWhere(condition.item),
     };
   }
 
